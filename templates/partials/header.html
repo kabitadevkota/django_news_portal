@@ -1,0 +1,123 @@
+{% load static %}
+
+<!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="newsbox-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container-fluid">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="newsboxNav">
+
+                        <!-- Nav brand -->
+                        <a href="{% static 'index.html' %}" class="nav-brand"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="{% static '#' %}">International</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+                                                <li class="title">Europe</li>
+                                                <li><a href="{% static '#' %}">United Kingdom</a></li>
+                                                <li><a href="{% static '#' %}">Germany</a></li>
+                                                <li><a href="{% static '#' %}">Latvia</a></li>
+                                                <li><a href="{% static '#' %}">Poland</a></li>
+                                                <li><a href="{% static '#' %}">Italy</a></li>
+                                                <li><a href="{% static '#' %}">France</a></li>
+                                                <li><a href="{% static '#' %}">Crotia</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li class="title">Africa</li>
+                                                <li><a href="{% static '#' %}">Algeria</a></li>
+                                                <li><a href="{% static '#' %}">Angola</a></li>
+                                                <li><a href="{% static '#' %}">Benin</a></li>
+                                                <li><a href="{% static '#' %}">Botswana</a></li>
+                                                <li><a href="{% static '#' %}">Burkina Faso</a></li>
+                                                <li><a href="{% static '#' %}">Burundi</a></li>
+                                                <li><a href="{% static '#' %}">Cameroon</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li class="title">Asia</li>
+                                                <li><a href="{% static '#' %}">Bangladesh</a></li>
+                                                <li><a href="{% static '#' %}">Chaina</a></li>
+                                                <li><a href="{% static '#' %}">India</a></li>
+                                                <li><a href="{% static '#' %}">Afganistan</a></li>
+                                                <li><a href="{% static '#' %}">Sri Lanka</a></li>
+                                                <li><a href="{% static '#' %}">Nepal</a></li>
+                                                <li><a href="{% static '#' %}">Bhutan</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li class="title">USA &amp; Canada</li>
+                                                <li><a href="{% static '#' %}">California</a></li>
+                                                <li><a href="{% static '#' %}">Florida</a></li>
+                                                <li><a href="{% static '#' %}">Alabama</a></li>
+                                                <li><a href="{% static '#' %}">New Yorks</a></li>
+                                                <li><a href="{% static '#' %}">Texas</a></li>
+                                                <li><a href="{% static '#' %}">Lowa</a></li>
+                                                <li><a href="{% static '#' %}">Montana</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="{% static '#' %}">Local News</a></li>
+                                    <li><a href="{% static '#' %}">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="{% static 'index.html' %}">Home</a></li>
+                                            <li><a href="{% static 'catagory.html' %}">Catagory</a></li>
+                                            <li><a href="{% static 'single-post.html' %}">Single Post</a></li>
+                                            <li><a href="{% static 'contact.html' %}">Contact</a></li>
+                                            <li><a href="{% static 'elements.html' %}">Elements</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% static '#' %}">Sport</a>
+                                        <ul class="dropdown">
+                                            <li><a href="{% static '#' %}">Archery</a></li>
+                                            <li><a href="{% static '#' %}">Badminton</a></li>
+                                            <li><a href="{% static '#' %}">Baseball</a></li>
+                                            <li><a href="{% static '#' %}">Boxing</a></li>
+                                            <li><a href="{% static '#' %}">Climbing</a></li>
+                                            <li><a href="{% static '#' %}">Cricket</a></li>
+                                            <li><a href="{% static '#' %}">Football</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% static '#' %}">Lifestyle</a></li>
+                                </ul>
+
+                                <!-- Header Add Area -->
+                                <div class="header-add-area">
+                                    {% if request.user.is_authenticated %}
+                                    <a href="{% url 'logout' %}">
+                                        <button type="button" class="btn btn-light">logout</button>
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'login' %}">
+                                        <button type="button" class="btn btn-danger">Login</button>
+                                    </a>
+                                    <a href="{% static '#' %}">
+                                        <button type="button" class="btn btn-danger">Signup</button>
+                                    </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
