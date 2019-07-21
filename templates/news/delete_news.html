@@ -1,0 +1,43 @@
+{% extends "partials/layout.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block header %}
+    {% include "partials/header.html" %}
+    {{content}}
+{% endblock header %}
+    
+{% block breakingnews %}
+    {% include "partials/breakingnews.html" %}
+{% endblock breakingnews %}
+ 
+
+{% block allnews %}
+<div class="container">
+    <div class="col-md-6 text-center" style="margin-left: 25%;">
+    <p> Do you really want to delete this news? </p>
+        <form method="post">
+            {% csrf_token %}
+        
+    </div>
+      <a href=""> <button type="submit" class="btn btn-danger text-center">yes</button>
+    <a href="">  <button type="button" class="btn btn-danger text-center" style="margin-left: 47%;">No</button>
+</form>
+
+</div>
+{% endblock allnews %}
+
+{% block topnews %}
+    {% include "partials/topnews.html" %}
+{% endblock topnews %}
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock footer %}
+
+{% block scripts %}
+    {% include "partials/scripts.html" %}
+{% endblock scripts %}
